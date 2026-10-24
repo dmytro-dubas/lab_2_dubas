@@ -12,7 +12,7 @@ TARGET_OPT = $(BIN_DIR)/prog_optimized
 ASM_BASE = $(ASM_DIR)/baseline_O0.s
 ASM_OPT = $(ASM_DIR)/optimized_O3_avx2.s
 
-.PHONY: all directories clean asm run_base run_opt profile flamegraph energy compare asmstats ablation full
+.PHONY: all directories clean asm run_base run_opt profile flamegraph energy compare asmstats ablation results_md full
 
 all: directories $(TARGET_BASE) $(TARGET_OPT) asm
 
@@ -59,7 +59,11 @@ asmstats: asm
 ablation:
 	@bash scripts/ablation.sh
 
-full: all profile flamegraph energy compare asmstats ablation
+results_md:
+	@python3 scripts/make_results_md.py
+
+# Full pipeline in the right order (energy needs sudo / perf_event_paranoid<=0 for RAPL)
+full: all profile flamegraph energy compare asmstats ablation results_md
 
 clean:
 	rm -rf $(BIN_DIR)/* $(ASM_DIR)/* $(RES_DIR)/* perf*.data* out*.perf out*.folded

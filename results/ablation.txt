@@ -1,6 +1,0 @@
-variant                  time(s)    checksum
-O0                       4.24       Checksum: 50331.648438
-O3_sse2                  2.12       Checksum: 50331.648438
-O3_sse2_fastmath         1.46       Checksum: 50331.628906
-O3_avx2_fma              1.18       Checksum: 50331.648438
-O3_avx2_fma_fastmath     0.67       Checksum: 50331.621094
