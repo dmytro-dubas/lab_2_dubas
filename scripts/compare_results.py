@@ -2,7 +2,7 @@ import os, re, sys, json
 
 FILES = ["results/time_verbose_baseline.txt", "results/time_verbose_optimized.txt",
          "results/perf_stat_baseline.txt", "results/perf_stat_optimized.txt"]
-EVENTS = r"cycles|instructions|branches|branch-misses|L1-dcache-loads|L1-dcache-load-misses|LLC-loads|LLC-load-misses"
+EVENTS = r"(?:cpu-)?cycles|instructions|branches|branch-misses|L1-dcache-loads|L1-dcache-load-misses|LLC-loads|LLC-load-misses"
 
 def load_time(path):
     d = {}
@@ -22,7 +22,10 @@ def load_perf(path):
     for line in open(path, encoding="utf-8"):
         m = pat.match(line)
         if m:
-            d[m.group(2)] = float(m.group(1).replace(",", ""))
+            key = m.group(2)
+            if key == "cpu-cycles":
+                key = "cycles"
+            d[key] = float(m.group(1).replace(",", ""))
     if "cycles" in d and "instructions" in d:
         d["ipc"] = d["instructions"] / d["cycles"]
     for name, a, b in [("branch_miss_pct", "branch-misses", "branches"),
