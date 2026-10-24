@@ -1,5 +1,3 @@
-"""Assembles results/RESULTS.md from real measurement files (nothing is invented:
-missing sections are reported as 'not measured')."""
 import csv
 import os
 

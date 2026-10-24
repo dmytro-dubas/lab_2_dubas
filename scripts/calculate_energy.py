@@ -4,7 +4,6 @@ import json
 
 
 def _num(tok):
-    """Parse a perf number ('1,234.5' / '1.234,5' / '<not supported>'). Returns None if not a number."""
     tok = tok.strip()
     if tok.startswith("<"):
         return None
@@ -19,7 +18,6 @@ def _num(tok):
 
 
 def parse_perf_energy(file_path):
-    """Returns (pkg_J, ram_J, elapsed_s); a value is None if perf could not measure it."""
     pkg = ram = elapsed = None
     if not os.path.exists(file_path):
         return pkg, ram, elapsed
@@ -38,7 +36,6 @@ def parse_perf_energy(file_path):
 
 
 def parse_wall_time(file_path):
-    """Wall-clock seconds from `/usr/bin/time -v` output (fallback for elapsed)."""
     if not os.path.exists(file_path):
         return None
     with open(file_path, "r", encoding="utf-8") as f:

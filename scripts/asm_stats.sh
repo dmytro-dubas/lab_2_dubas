@@ -1,5 +1,4 @@
 #!/bin/bash
-# Counts scalar vs packed (SIMD) FP instructions in the generated assembly (task 4.1 / 4.1.1).
 set -e
 mkdir -p results
 [ -f asm/baseline_O0.s ] && [ -f asm/optimized_O3_avx2.s ] || make asm
@@ -8,7 +7,6 @@ OUT=results/asm_stats.txt
 : > $OUT
 for f in asm/baseline_O0.s asm/optimized_O3_avx2.s; do
     echo "=== $f ===" | tee -a $OUT
-    # keep only real instructions (drop verbose-asm comments and directives)
     grep -E '^\s+[a-z]' "$f" | grep -vE '^\s+\.' | awk '{print $1}' > /tmp/_insn.txt
     {
     echo "total instructions:        $(wc -l < /tmp/_insn.txt)"

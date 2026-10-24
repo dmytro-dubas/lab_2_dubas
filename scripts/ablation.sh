@@ -1,5 +1,4 @@
 #!/bin/bash
-# Which flag gives what? Builds 5 variants and times them (supports 4.1 / 4.2 explanations).
 set -e
 mkdir -p bin results
 IT=${1:-30}
@@ -16,7 +15,6 @@ printf "%-24s %-10s %s\n" "variant" "time(s)" "checksum" | tee $OUT
 TIMEFORMAT=%R
 for k in "${ORDER[@]}"; do
     gcc ${FLAGS[$k]} -g -fno-omit-frame-pointer src/main.c -o bin/abl_$k -lm
-    # best of 3 runs
     best=999999; chk=""
     for _ in 1 2 3; do
         t=$( { time ./bin/abl_$k $IT > /tmp/_o.txt; } 2>&1 )

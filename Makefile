@@ -62,7 +62,6 @@ ablation:
 results_md:
 	@python3 scripts/make_results_md.py
 
-# Full pipeline in the right order (energy needs sudo / perf_event_paranoid<=0 for RAPL)
 full: all profile flamegraph energy compare asmstats ablation results_md
 
 clean:
