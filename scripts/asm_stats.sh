@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -e
 mkdir -p results
 [ -f asm/baseline_O0.s ] && [ -f asm/optimized_O3_avx2.s ] || make asm

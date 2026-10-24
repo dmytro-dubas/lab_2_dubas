@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -e
 mkdir -p bin results
 IT=${1:-30}

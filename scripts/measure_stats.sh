@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -e
 
 mkdir -p results
@@ -10,11 +10,13 @@ if [ ! -f "$BIN_BASE" ] || [ ! -f "$BIN_OPT" ]; then
     make
 fi
 
-echo "[1/4] Running /usr/bin/time --verbose for baseline..."
-/usr/bin/time -v $BIN_BASE > /dev/null 2> results/time_verbose_baseline.txt
+TIME_CMD="$(type -P time 2>/dev/null || echo "/usr/bin/time")"
 
-echo "[2/4] Running /usr/bin/time --verbose for optimized..."
-/usr/bin/time -v $BIN_OPT > /dev/null 2> results/time_verbose_optimized.txt
+echo "[1/4] Running time --verbose for baseline..."
+$TIME_CMD -v $BIN_BASE > /dev/null 2> results/time_verbose_baseline.txt
+
+echo "[2/4] Running time --verbose for optimized..."
+$TIME_CMD -v $BIN_OPT > /dev/null 2> results/time_verbose_optimized.txt
 
 echo "[3/4] Running perf stat -d for baseline..."
 perf stat -d -r 3 -o results/perf_stat_baseline.txt $BIN_BASE > /dev/null
