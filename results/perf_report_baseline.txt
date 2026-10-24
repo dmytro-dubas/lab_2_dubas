@@ -1,0 +1,10 @@
+# Samples: 4200 of event 'cycles:u'
+# Event count (approx.): 18224000000
+#
+# Overhead       Samples  Command        Shared Object      Symbol
+# ........  ............  .............  .................  ..........................
+#
+    67.62%          2840  prog_baseline  prog_baseline      [.] compute_heavy_workload
+    16.19%           680  prog_baseline  prog_baseline      [.] process_subtask_a
+    13.33%           560  prog_baseline  prog_baseline      [.] process_subtask_b
+     2.86%           120  prog_baseline  prog_baseline      [.] init_dataset

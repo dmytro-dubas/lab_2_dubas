@@ -1,0 +1,45 @@
+<svg version="1.1" width="1200" height="143" viewBox="0 0 1200 143" xmlns="http://www.w3.org/2000/svg">
+<style type="text/css">
+text { font-family: "Segoe UI", Helvetica, Arial, sans-serif; font-size: 11px; fill: #111; pointer-events: none; }
+.func:hover { stroke: #000; stroke-width: 1.5; cursor: pointer; filter: brightness(1.15); }
+</style>
+<rect width="100%" height="100%" fill="#fafafa"/>
+<text x="10" y="28" font-size="18" font-weight="bold" fill="#2c3e50">CPU Flame Graph: Optimized Execution (-O3, AVX-2, FMA)</text>
+<text x="10" y="48" font-size="12" fill="#7f8c8d">Total samples: 670 (100.0%) | Click to inspect details</text>
+<text id="details" x="500" y="48" font-size="12" font-weight="bold" fill="#c0392b"></text>
+<g class="func" onclick="showDetails('main', 670, 100.00)">
+  <title>main (670 samples, 100.00%)</title>
+  <rect x="10.00" y="102.00" width="1179.50" height="20" fill="#f06543" rx="2" ry="2"/>
+  <text x="14.00" y="116.00">main</text>
+</g>
+<g class="func" onclick="showDetails('benchmark_pipeline', 560, 83.58)">
+  <title>benchmark_pipeline (560 samples, 83.58%)</title>
+  <rect x="10.00" y="81.00" width="985.77" height="20" fill="#f28e2b" rx="2" ry="2"/>
+  <text x="14.00" y="95.00">benchmark_pipeline</text>
+</g>
+<g class="func" onclick="showDetails('init_dataset', 110, 16.42)">
+  <title>init_dataset (110 samples, 16.42%)</title>
+  <rect x="996.27" y="81.00" width="193.23" height="20" fill="#e15759" rx="2" ry="2"/>
+  <text x="1000.27" y="95.00">init_dataset</text>
+</g>
+<g class="func" onclick="showDetails('compute_heavy_workload', 260, 38.81)">
+  <title>compute_heavy_workload (260 samples, 38.81%)</title>
+  <rect x="10.00" y="60.00" width="457.41" height="20" fill="#ffbe4d" rx="2" ry="2"/>
+  <text x="14.00" y="74.00">compute_heavy_workload</text>
+</g>
+<g class="func" onclick="showDetails('process_subtask_a', 140, 20.90)">
+  <title>process_subtask_a (140 samples, 20.90%)</title>
+  <rect x="467.91" y="60.00" width="246.07" height="20" fill="#d33f49" rx="2" ry="2"/>
+  <text x="471.91" y="74.00">process_subtask_a</text>
+</g>
+<g class="func" onclick="showDetails('process_subtask_b', 160, 23.88)">
+  <title>process_subtask_b (160 samples, 23.88%)</title>
+  <rect x="714.48" y="60.00" width="281.29" height="20" fill="#ed7d31" rx="2" ry="2"/>
+  <text x="718.48" y="74.00">process_subtask_b</text>
+</g>
+<script type="text/javascript">
+function showDetails(name, samples, pct) {
+  document.getElementById("details").textContent = "Selected: " + name + " -> " + samples + " samples (" + pct + "%)";
+}
+</script>
+</svg>

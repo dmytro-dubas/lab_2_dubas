@@ -1,0 +1,6 @@
+bin/
+perf*.data*
+out*.perf
+out*.folded
+FlameGraph/
+*.o

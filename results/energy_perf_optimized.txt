@@ -1,0 +1,6 @@
+ Performance counter stats for './bin/prog_optimized':
+
+             23.45 Joules power/energy-pkg/
+              2.86 Joules power/energy-ram/
+
+       0.674512080 seconds time elapsed

@@ -1,0 +1,6 @@
+ Performance counter stats for './bin/prog_baseline':
+
+            118.44 Joules power/energy-pkg/
+             14.28 Joules power/energy-ram/
+
+       4.246102140 seconds time elapsed
