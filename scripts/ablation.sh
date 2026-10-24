@@ -6,8 +6,8 @@ declare -A FLAGS=(
   ["O0"]="-O0"
   ["O3_sse2"]="-O3"
   ["O3_sse2_fastmath"]="-O3 -ffast-math"
-  ["O3_avx2_fma"]="-O3 -mavx2 -mfma"
-  ["O3_avx2_fma_fastmath"]="-O3 -mavx2 -mfma -ffast-math"
+  ["O3_avx2_fma"]="-O3 -march=native"
+  ["O3_avx2_fma_fastmath"]="-O3 -march=native -ffast-math"
 )
 ORDER=(O0 O3_sse2 O3_sse2_fastmath O3_avx2_fma O3_avx2_fma_fastmath)
 OUT=results/ablation.txt

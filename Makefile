@@ -1,7 +1,7 @@
 CC ?= gcc
 CFLAGS_COMMON = -Wall -Wextra -g -fno-omit-frame-pointer
 CFLAGS_BASE = $(CFLAGS_COMMON) -O0
-CFLAGS_OPT = $(CFLAGS_COMMON) -O3 -mavx2 -mfma -ffast-math
+CFLAGS_OPT = $(CFLAGS_COMMON) -O3 -march=native -ffast-math
 SRC = src/main.c
 BIN_DIR = bin
 ASM_DIR = asm

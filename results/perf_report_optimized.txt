@@ -1,0 +1,234 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 4K of event 'cpu/cycles/P'
+# Event count (approx.): 3626770222
+#
+# Overhead       Samples  Command         Shared Object      Symbol                                       
+# ........  ............  ..............  .................  .............................................
+#
+    35.66%          1735  prog_optimized  prog_optimized     [.] compute_heavy_workload
+            |          
+             --35.47%--compute_heavy_workload
+                       printf (inlined)
+                       main
+                       __libc_start_call_main
+                       __libc_start_main@@GLIBC_2.34
+                       _start
+
+    28.97%          1405  prog_optimized  prog_optimized     [.] process_subtask_a
+            |          
+             --28.74%--process_subtask_a
+                       printf (inlined)
+                       main
+                       __libc_start_call_main
+                       __libc_start_main@@GLIBC_2.34
+                       _start
+
+    24.85%          1208  prog_optimized  prog_optimized     [.] process_subtask_b
+            |          
+             --24.77%--process_subtask_b
+                       printf (inlined)
+                       main
+                       __libc_start_call_main
+                       __libc_start_main@@GLIBC_2.34
+                       _start
+
+     0.59%            29  prog_optimized  prog_optimized     [.] init_dataset
+     0.39%            19  prog_optimized  [kernel.kallsyms]  [k] kernel_init_pages
+     0.21%            10  prog_optimized  [kernel.kallsyms]  [k] _raw_spin_lock
+     0.20%            10  prog_optimized  [kernel.kallsyms]  [k] native_irq_return_iret
+     0.19%             9  prog_optimized  [kernel.kallsyms]  [k] perf_adjust_freq_unthr_context
+     0.18%             9  prog_optimized  [kernel.kallsyms]  [k] __hrtimer_run_queues
+     0.17%             8  prog_optimized  [kernel.kallsyms]  [k] __irqentry_text_end
+     0.17%             8  prog_optimized  [kernel.kallsyms]  [k] update_cfs_group
+     0.16%             8  prog_optimized  [kernel.kallsyms]  [k] irqentry_exit
+     0.16%             8  prog_optimized  [kernel.kallsyms]  [k] do_anonymous_page
+     0.15%             7  prog_optimized  [kernel.kallsyms]  [k] timerqueue_add
+     0.15%             7  prog_optimized  [kernel.kallsyms]  [k] __update_load_avg_se
+     0.14%             7  prog_optimized  [kernel.kallsyms]  [k] mas_walk
+     0.12%             6  prog_optimized  [kernel.kallsyms]  [k] gen8_irq_handler
+     0.12%             6  prog_optimized  [kernel.kallsyms]  [k] task_tick_fair
+     0.12%             6  prog_optimized  [kernel.kallsyms]  [k] update_curr
+     0.12%             6  prog_optimized  [kernel.kallsyms]  [k] __handle_mm_fault
+     0.12%             6  prog_optimized  [kernel.kallsyms]  [k] get_mem_cgroup_from_mm
+     0.10%             5  prog_optimized  [kernel.kallsyms]  [k] native_sched_clock
+     0.10%             5  prog_optimized  [kernel.kallsyms]  [k] hrtimer_interrupt
+     0.10%             5  prog_optimized  [kernel.kallsyms]  [k] x86_pmu_disable
+     0.10%             5  prog_optimized  [kernel.kallsyms]  [k] psi_account_irqtime
+     0.10%             5  prog_optimized  [kernel.kallsyms]  [k] native_queued_spin_lock_slowpath
+     0.10%             5  prog_optimized  [kernel.kallsyms]  [k] error_entry
+     0.09%             4  prog_optimized  [kernel.kallsyms]  [k] __list_del_entry_valid_or_report
+     0.09%             4  prog_optimized  [kernel.kallsyms]  [k] update_rq_clock
+     0.08%             4  prog_optimized  [kernel.kallsyms]  [k] rcu_report_qs_rdp
+     0.08%             4  prog_optimized  [kernel.kallsyms]  [k] __i915_vma_retire
+     0.08%             4  prog_optimized  [kernel.kallsyms]  [k] psi_task_change
+     0.08%             4  prog_optimized  [kernel.kallsyms]  [k] blk_cgroup_congested
+     0.08%             4  prog_optimized  [kernel.kallsyms]  [k] do_user_addr_fault
+     0.08%             4  prog_optimized  [kernel.kallsyms]  [k] handle_mm_fault
+     0.08%             4  prog_optimized  [kernel.kallsyms]  [k] __css_rstat_updated
+     0.08%             4  prog_optimized  [kernel.kallsyms]  [k] __rcu_read_lock
+     0.08%             4  prog_optimized  [kernel.kallsyms]  [k] wakeup_preempt_fair
+     0.08%             4  prog_optimized  [kernel.kallsyms]  [k] irqentry_enter
+     0.08%             4  prog_optimized  [kernel.kallsyms]  [k] __alloc_frozen_pages_noprof
+     0.08%             4  prog_optimized  [kernel.kallsyms]  [k] pte_offset_map_rw_nolock
+     0.08%             4  prog_optimized  [kernel.kallsyms]  [k] folio_prealloc
+     0.08%             4  prog_optimized  [kernel.kallsyms]  [k] __rmqueue_pcplist
+     0.08%             4  prog_optimized  [kernel.kallsyms]  [k] record_times
+     0.06%             3  prog_optimized  [kernel.kallsyms]  [k] native_write_msr
+     0.06%             3  prog_optimized  [kernel.kallsyms]  [k] handle_edge_irq
+     0.06%             3  prog_optimized  [kernel.kallsyms]  [k] get_vma_policy
+     0.06%             3  prog_optimized  [kernel.kallsyms]  [k] rcu_core
+     0.06%             3  prog_optimized  [kernel.kallsyms]  [k] kthread_is_per_cpu
+     0.06%             3  prog_optimized  [kernel.kallsyms]  [k] __pgalloc_tag_add
+     0.06%             3  prog_optimized  [kernel.kallsyms]  [k] asm_sysvec_apic_timer_interrupt
+     0.06%             3  prog_optimized  [kernel.kallsyms]  [k] rb_next
+     0.06%             3  prog_optimized  [kernel.kallsyms]  [k] update_curr_dl_se
+     0.06%             3  prog_optimized  [kernel.kallsyms]  [k] __calc_delta.constprop.0
+     0.06%             3  prog_optimized  [kernel.kallsyms]  [k] update_se
+     0.06%             3  prog_optimized  [kernel.kallsyms]  [k] _raw_spin_lock_irqsave
+     0.06%             3  prog_optimized  [kernel.kallsyms]  [k] notifier_call_chain
+     0.06%             3  prog_optimized  [kernel.kallsyms]  [k] sugov_update_single_freq
+     0.06%             3  prog_optimized  [kernel.kallsyms]  [k] __folio_batch_add_and_move
+     0.06%             3  prog_optimized  [kernel.kallsyms]  [k] lru_gen_add_folio
+     0.06%             3  prog_optimized  [kernel.kallsyms]  [k] count_memcg_events
+     0.06%             3  prog_optimized  [kernel.kallsyms]  [k] process_csb
+     0.06%             3  prog_optimized  [kernel.kallsyms]  [k] get_page_from_freelist
+     0.06%             3  prog_optimized  [kernel.kallsyms]  [k] lock_vma_under_rcu
+     0.06%             3  prog_optimized  [kernel.kallsyms]  [k] __timekeeping_advance.constprop.0
+     0.06%             3  prog_optimized  [kernel.kallsyms]  [k] update_cfs_rq_load_avg
+     0.06%             3  prog_optimized  [kernel.kallsyms]  [k] _raw_spin_trylock
+     0.06%             3  prog_optimized  [kernel.kallsyms]  [k] account_user_time
+     0.06%             3  prog_optimized  [kernel.kallsyms]  [k] __list_add_valid_or_report
+     0.06%             3  prog_optimized  [kernel.kallsyms]  [k] __cgroup_account_cputime_field
+     0.06%             3  prog_optimized  [kernel.kallsyms]  [k] asm_exc_page_fault
+     0.06%             3  prog_optimized  [kernel.kallsyms]  [k] sync_regs
+     0.04%             2  prog_optimized  [kernel.kallsyms]  [k] __mem_cgroup_charge
+     0.04%             2  prog_optimized  [kernel.kallsyms]  [k] __rcu_read_unlock
+     0.04%             2  prog_optimized  [kernel.kallsyms]  [k] native_read_msr
+     0.04%             2  prog_optimized  [kernel.kallsyms]  [k] __execlists_schedule_out
+     0.04%             2  prog_optimized  [kernel.kallsyms]  [k] __queue_work
+     0.04%             2  prog_optimized  [kernel.kallsyms]  [k] percpu_counter_add_batch
+     0.04%             2  prog_optimized  [kernel.kallsyms]  [k] irq_work_tick
+     0.04%             2  prog_optimized  [kernel.kallsyms]  [k] update_fast_timekeeper
+     0.04%             2  prog_optimized  [kernel.kallsyms]  [k] fpregs_assert_state_consistent
+     0.04%             2  prog_optimized  [kernel.kallsyms]  [k] sched_clock_cpu
+     0.04%             2  prog_optimized  [kernel.kallsyms]  [k] sched_balance_trigger
+     0.04%             2  prog_optimized  [kernel.kallsyms]  [k] reweight_entity
+     0.04%             2  prog_optimized  [kernel.kallsyms]  [k] ktime_get_update_offsets_now
+     0.04%             2  prog_optimized  [kernel.kallsyms]  [k] read_tsc
+     0.04%             2  prog_optimized  [kernel.kallsyms]  [k] _raw_spin_unlock
+     0.04%             2  prog_optimized  [kernel.kallsyms]  [k] __irq_exit_rcu
+     0.04%             2  prog_optimized  [kernel.kallsyms]  [k] ep_poll_callback
+     0.04%             2  prog_optimized  [kernel.kallsyms]  [k] update_irq_load_avg
+     0.04%             2  prog_optimized  [kernel.kallsyms]  [k] tmigr_requires_handle_remote_up
+     0.04%             2  prog_optimized  [kernel.kallsyms]  [k] tick_nohz_handler
+     0.04%             2  prog_optimized  [kernel.kallsyms]  [k] tick_nohz_get_idle_calls_cpu
+     0.04%             2  prog_optimized  [kernel.kallsyms]  [k] mod_node_page_state
+     0.04%             2  prog_optimized  [kernel.kallsyms]  [k] tick_do_update_jiffies64
+     0.04%             2  prog_optimized  [kernel.kallsyms]  [k] fwtable_read32
+     0.04%             2  prog_optimized  [kernel.kallsyms]  [k] charge_memcg
+     0.04%             2  prog_optimized  [kernel.kallsyms]  [k] _atomic_dec_and_lock_irqsave
+     0.04%             2  prog_optimized  [kernel.kallsyms]  [k] acct_account_cputime
+     0.04%             2  prog_optimized  [kernel.kallsyms]  [k] net_rx_action
+     0.04%             2  prog_optimized  [kernel.kallsyms]  [k] swake_up_one
+     0.04%             2  prog_optimized  [kernel.kallsyms]  [k] avg_vruntime
+     0.04%             2  prog_optimized  [kernel.kallsyms]  [k] update_vsyscall
+     0.04%             2  prog_optimized  [kernel.kallsyms]  [k] __schedule
+     0.04%             2  prog_optimized  [kernel.kallsyms]  [k] __enqueue_entity
+     0.04%             2  prog_optimized  [kernel.kallsyms]  [k] cpuacct_account_field
+     0.04%             2  prog_optimized  [kernel.kallsyms]  [k] sysvec_apic_timer_interrupt
+     0.04%             2  prog_optimized  [kernel.kallsyms]  [k] rb_erase
+     0.04%             2  prog_optimized  [kernel.kallsyms]  [k] vma_alloc_folio_noprof
+     0.04%             2  prog_optimized  [kernel.kallsyms]  [k] folio_add_new_anon_rmap
+     0.03%             2  prog_optimized  [kernel.kallsyms]  [k] pfn_pte
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] wakeup_preempt
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] irq_chip_ack_parent
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] idr_find
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] tmigr_handle_remote
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] complete_all
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] PageMemcgKmem
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] exc_page_fault
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] irqtime_account_process_tick
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] vruntime_eligible
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] __active_retire
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] __common_interrupt
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] ___free_pages
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] static_key_count
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] page_ext_get
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] __alloc_tagging_slab_free_hook
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] propagate_entity_load_avg
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] signal_irq_work
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] lruvec_stat_mod_folio
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] cmp_bss
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] note_gp_changes
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] arch_scale_cpu_capacity
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] profile_tick
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] place_entity
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] psi_group_change
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] set_ptes.isra.0
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] pick_task_fair
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] update_entity_lag
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] migrate_task_rq_fair
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] ath10k_pci_process_rx_cb
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] __resched_curr
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] rcu_note_context_switch
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] intel_pmu_disable_all
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] run_posix_cpu_timers
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] migrate_disable_switch.isra.0
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] error_return
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] __walk_groups_from
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] folio_add_lru
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] _raw_spin_lock_irq
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] needs_timeslice
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] __pte_offset_map
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] ___i915_gem_object_make_shrinkable
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] tmigr_requires_handle_remote
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] nf_hook_slow
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] irq_work_run_list
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] try_charge_memcg
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] __sched_balance_update_blocked_averages
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] delay_tsc
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] kmem_cache_alloc_node_noprof
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] arch_scale_freq_tick
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] __update_load_avg_cfs_rq
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] raw_notifier_call_chain
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] cc_platform_has
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] dl_server_update
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] wake_up_bit
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] calc_global_load
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] tlb_remove_table_rcu
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] invoke_rcu_core
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] __free_frozen_pages
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] cpu_util_cfs_boost
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] update_wall_time
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] get_jiffies_update
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] _raw_spin_unlock_irqrestore
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] select_task_rq_fair
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] mem_cgroup_from_task
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] irq_enter_rcu
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] rcu_segcblist_ready_cbs
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] native_apic_msr_eoi
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] do_rps_boost
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] update_load_avg
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] execlists_submission_tasklet
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] hrtimer_update_next_event
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] __sysvec_apic_timer_interrupt
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] lapic_next_deadline
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] irqtime_account_irq
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] enqueue_task_fair
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] execlists_timeslice
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] update_dl_rq_load_avg
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] nf_hook_slow_list
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] tick_program_event
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] pick_next_task_fair
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] sched_tick
+     0.02%             1  prog_optimized  [kernel.kallsyms]  [k] rcu_qs.part.0
+     0.01%             1  prog_optimized  [kernel.kallsyms]  [k] do_fault
+
+
+#
+# (Tip: To trace only single function with Processor Trace use perf record --filter 'filter func @ program' -e intel_pt//u ./program ; perf script --insn-trace)
+#

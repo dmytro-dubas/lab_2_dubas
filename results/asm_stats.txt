@@ -1,0 +1,32 @@
+=== asm/baseline_O0.s ===
+total instructions:        302
+scalar FP (*ss):           58
+packed FP (*ps, 4/8 lanes): 0
+ymm (256-bit) operands:    0
+xmm (128-bit) operands:    80
+--- top FP/vector mnemonics ---
+     36 movss
+     12 addss
+     10 mulss
+      6 cvtsi2ssq
+      1 cvtss2sd
+
+=== asm/optimized_O3_avx2.s ===
+total instructions:        555
+scalar FP (*ss):           93
+packed FP (*ps, 4/8 lanes): 52
+ymm (256-bit) operands:    0
+xmm (128-bit) operands:    249
+--- top FP/vector mnemonics ---
+     47 movss
+     25 mulss
+     21 addss
+     17 addps
+     15 shufps
+     14 mulps
+     11 movaps
+     11 cvtsi2ssq
+     10 movups
+      3 cvtdq2ps
+      1 cvtss2sd
+

@@ -1,0 +1,37 @@
+================================================================================
+                    ENERGY CONSUMPTION MEASUREMENT REPORT
+================================================================================
+Baseline Idle Power (measured with `perf stat -a sleep`):
+  Package (CPU Core + Uncore):              3.45 W
+  DRAM (Memory Subsystem):                  0.26 W
+  Total Idle Power:                         3.72 W
+
+1. BASELINE PROGRAM (-O0)
+--------------------------------------------------------------------------------
+Execution Wall Time (T_elapsed):             45.560 s
+CPU Package Energy (E_pkg):                  168.780 J
+RAM Energy (E_dram):                         13.200 J
+Total System Energy during run (E_system):   181.980 J
+Average Total Power during run (P_avg):      3.99 W
+Program-only Dynamic Package Energy:         11.416 J
+Program-only Dynamic RAM Energy:             1.263 J
+Total Program-only Dynamic Energy (E_prog):  12.679 J
+
+2. OPTIMIZED PROGRAM (-O3 + AVX2 + FMA + FastMath)
+--------------------------------------------------------------------------------
+Execution Wall Time (T_elapsed):             5.418 s
+CPU Package Energy (E_pkg):                  20.950 J
+RAM Energy (E_dram):                         2.170 J
+Total System Energy during run (E_system):   23.120 J
+Average Total Power during run (P_avg):      4.27 W
+Program-only Dynamic Package Energy:         2.235 J
+Program-only Dynamic RAM Energy:             0.750 J
+Total Program-only Dynamic Energy (E_prog):  2.985 J
+
+3. COMPARATIVE ANALYSIS & CONCLUSIONS
+--------------------------------------------------------------------------------
+Execution Time Speedup:                      8.41x faster
+System Energy Reduction:                     87.3% reduction
+Program-only Dynamic Energy Reduction:       76.5% reduction
+Average Power Change:                        +6.8% (race-to-sleep: power may rise, energy = P x t falls)
+================================================================================

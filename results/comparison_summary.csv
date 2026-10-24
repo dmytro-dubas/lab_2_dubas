@@ -1,0 +1,13 @@
+Metric,Baseline,Optimized,Delta
+"Wall time (s)","51.950","6.260","-87.9%"
+"User time (s)","35.860","4.120","-88.5%"
+"Max RSS (MB)","49.9","49.9","-0.0%"
+"Cycles (G)","n/a","n/a","n/a"
+"Instructions (G)","44.39","4.89","-89.0%"
+"IPC","n/a","n/a","n/a"
+"Branch miss (%)","0.21","0.19","-9.1%"
+"L1d miss (%)","n/a","n/a","n/a"
+"LLC miss (%)","n/a","n/a","n/a"
+"System energy (J)","181.980","23.120","-87.3%"
+"Program-only energy (J)","12.679","2.985","-76.5%"
+"Avg power (W)","3.99","4.27","+6.8%"

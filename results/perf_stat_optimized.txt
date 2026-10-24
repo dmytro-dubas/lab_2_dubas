@@ -1,0 +1,17 @@
+# started on Sat Oct 24 22:54:11 2026
+
+
+ Performance counter stats for './bin/prog_optimized' (3 runs):
+
+             2,175      context-switches                 #    460.5 cs/sec  cs_per_second       ( +-  3.81% )
+                32      cpu-migrations                   #      6.8 migrations/sec  migrations_per_second  ( +- 14.69% )
+            12,362      page-faults                      #   2617.6 faults/sec  page_faults_per_second  ( +-  0.00% )
+          4,722.66 msec task-clock                       #      0.8 CPUs  CPUs_utilized         ( +-  0.20% )
+       104,517,047      LLC-loads                        #      8.9 %  llc_miss_rate            ( +-  0.26% )  (42.70%)
+           753,586      branch-misses                    #      0.2 %  branch_miss_rate         ( +-  2.44% )  (28.59%)
+       397,965,495      branches                         #     84.3 M/sec  branch_frequency     ( +-  0.10% )  (28.69%)
+     3,626,602,840      cpu-cycles                       #      0.8 GHz  cycles_frequency       ( +-  0.26% )  (42.95%)
+     4,887,347,212      instructions                     #      1.3 instructions  insn_per_cycle  ( +-  0.04% )  (42.92%)
+
+       5.930461406 +- 0.212553195 seconds time elapsed  ( +-  3.58% )
+

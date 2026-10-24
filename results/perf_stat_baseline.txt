@@ -1,0 +1,17 @@
+# started on Sat Oct 24 22:51:32 2026
+
+
+ Performance counter stats for './bin/prog_baseline' (3 runs):
+
+            18,885      context-switches                 #    492.4 cs/sec  cs_per_second       ( +-  3.92% )
+               108      cpu-migrations                   #      2.8 migrations/sec  migrations_per_second  ( +- 29.44% )
+            12,366      page-faults                      #    322.5 faults/sec  page_faults_per_second  ( +-  0.03% )
+         38,350.01 msec task-clock                       #      0.7 CPUs  CPUs_utilized         ( +-  0.48% )
+       134,397,280      LLC-loads                        #      4.6 %  llc_miss_rate            ( +-  2.09% )  (42.92%)
+         5,480,230      branch-misses                    #      0.2 %  branch_miss_rate         ( +-  4.87% )  (28.54%)
+     2,630,857,016      branches                         #     68.6 M/sec  branch_frequency     ( +-  0.09% )  (28.53%)
+    29,617,832,833      cpu-cycles                       #      0.8 GHz  cycles_frequency       ( +-  0.52% )  (42.79%)
+    44,394,990,373      instructions                     #      1.5 instructions  insn_per_cycle  ( +-  0.02% )  (42.83%)
+
+      52.989729915 +- 2.764375428 seconds time elapsed  ( +-  5.22% )
+
